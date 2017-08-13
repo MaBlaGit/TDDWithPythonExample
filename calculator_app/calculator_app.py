@@ -4,12 +4,18 @@
 
 class Calculator(object):
 
-    def __init__(self, x, y):
-        self.x = Calculator.check_if_int_or_float(x)
-        self.y = Calculator.check_if_int_or_float(y)
+    """Calculator class."""
+
+    def __init__(self, num_x, num_y):
+        self.num_x = Calculator.check_if_int_or_float(num_x)
+        self.num_y = Calculator.check_if_int_or_float(num_y)
 
     @staticmethod
     def check_if_int_or_float(number):
+        """Static method which checks type of parameters.
+        :param number (int)
+        :return number(int)"""
+
         if not isinstance(number, (int, float)):
             raise Exception("Arguments passed to object should be of <class 'int'> or "
                             "<class 'float'>, not {0}".format(type(number)))
@@ -17,13 +23,17 @@ class Calculator(object):
             return number
 
     def add(self):
-        return self.x + self.y
+        """Add parameters."""
+        return self.num_x + self.num_y
 
     def subtract(self):
-        return self.x - self.y
+        """Subtract parameters."""
+        return self.num_x - self.num_y
 
     def multiply(self):
-        return self.x * self.y
+        """Multiply parameters."""
+        return self.num_x * self.num_y
 
     def divide(self):
-        return self.x / self.y
+        """Divide parameters."""
+        return self.num_x / self.num_y

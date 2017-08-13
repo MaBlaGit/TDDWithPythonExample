@@ -1,0 +1,14 @@
+
+"""Simple calculator class created in TDD concept."""
+
+
+class Calculator(object):
+
+    def add(self, x, y):
+        return x + y
+
+    def subtract(self, x, y):
+        return x - y
+
+    def multiply(self, x, y):
+        return x * y

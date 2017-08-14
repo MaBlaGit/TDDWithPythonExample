@@ -7,4 +7,6 @@ install:
 - make deps
 script:
 - make test
+- make pylint_tests
+- make pylint_app
 

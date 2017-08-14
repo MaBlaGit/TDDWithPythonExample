@@ -28,8 +28,9 @@ class TestCalculatorApp(unittest.TestCase):
         """Test division."""
         self.assertEqual(self.calculator.divide(), 0.4, "Results should be 0.4")
 
-    def test_datatype_raise_exception(self):
-        return self.assertRaises(Exception, self.calculator.multiply(), "3", 2)
+    def test_data_type_raise_exception(self):
+        """Test checks if wrong data type raise an exception."""
+        self.assertRaises(Exception, self.calculator.multiply(), "3", 2)
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

@@ -1,7 +1,7 @@
 deps:
 	pip install pylint
 test:
-	python3 -m unittest discover
+	python3 -m unittest discover -v
 
 pylint_tests:
 	pylint tests

@@ -2,7 +2,7 @@
 """Tests checking implementation of Calculator class."""
 
 import unittest
-from calculator.calculator_app.calculator_app import Calculator
+from calculator_app.calculator_app import Calculator
 
 
 class TestCalculatorApp(unittest.TestCase):

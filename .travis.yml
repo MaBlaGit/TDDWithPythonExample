@@ -6,7 +6,9 @@ before_script:
 install:
 - make deps
 script:
+- make docstring_test
 - make test
 - make pylint_tests
 - make pylint_app
+
 

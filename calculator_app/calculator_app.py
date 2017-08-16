@@ -10,8 +10,12 @@ class Calculator(object):
     >>> calc = Calculator(10, 10)
     >>> calc.add()
     20
+    >>> calc.subtract()
+    0
     >>> calc.multiply()
     100
+    >>> calc.divide()
+    1.0
     """
 
     def __init__(self, num_x, num_y):

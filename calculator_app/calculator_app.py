@@ -1,10 +1,18 @@
 
 """Simple calculator class created in TDD concept."""
 
+import doctest
 
 class Calculator(object):
 
-    """Calculator class."""
+    """Calculator class. Use docstring to check correct
+    functionality of the class.
+    >>> calc = Calculator(10, 10)
+    >>> calc.add()
+    20
+    >>> calc.multiply()
+    100
+    """
 
     def __init__(self, num_x, num_y):
         self.num_x = Calculator.check_if_int_or_float(num_x)
@@ -37,3 +45,6 @@ class Calculator(object):
     def divide(self):
         """Divide parameters."""
         return self.num_x / self.num_y
+
+if __name__ == '__main__':
+    doctest.testmod()

@@ -1,6 +1,8 @@
 language: python
 python:
 - '3.5'
+dist:
+- 'trusty'
 before_script:
 - export PYTHONPATH=$PYTHONPATH:$(pwd)
 install:
@@ -9,5 +11,3 @@ script:
 - make docstring_test
 - make pylint_tests
 - make pylint_app
-
-

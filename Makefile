@@ -1,7 +1,7 @@
 deps:
-	pip install pylint
+	pip install --upgrade -r requirements.txt
 docstring_test:
-	python3 calculator_app/calculator_app.py -v
+	nosetests --rednose --with-doctest -v
 test:
 	python3 -m unittest discover -v
 

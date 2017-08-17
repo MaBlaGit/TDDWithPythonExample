@@ -3,10 +3,14 @@
 
 import doctest
 
+
 class Calculator(object):
 
     """Calculator class. Use docstring to check correct
     functionality of the class.
+
+    - positive tests -
+
     >>> calc = Calculator(10, 10)
     >>> calc.add()
     20
@@ -16,6 +20,21 @@ class Calculator(object):
     100
     >>> calc.divide()
     1.0
+
+    - negative tests -
+
+    >>> wrong_type_one = Calculator(5, [1, 2])
+    Traceback (most recent call last):
+    ...
+    TypeError: Arguments passed to object should be of <class 'int'> or <class 'float'>
+    >>> wrong_type_two = Calculator(5, '5')
+    Traceback (most recent call last):
+    ...
+    TypeError: Arguments passed to object should be of <class 'int'> or <class 'float'>
+    >>> wrong_type_three = Calculator('10', '11')
+    Traceback (most recent call last):
+    ...
+    TypeError: Arguments passed to object should be of <class 'int'> or <class 'float'>
     """
 
     def __init__(self, num_x, num_y):
@@ -29,8 +48,8 @@ class Calculator(object):
         :return number(int)"""
 
         if not isinstance(number, (int, float)):
-            raise Exception("Arguments passed to object should be of <class 'int'> or "
-                            "<class 'float'>, not {0}".format(type(number)))
+            raise TypeError("Arguments passed to object should be of <class 'int'> or "
+                            "<class 'float'>")
         else:
             return number
 

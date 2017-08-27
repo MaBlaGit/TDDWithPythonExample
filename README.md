@@ -1,5 +1,5 @@
 # TDDWithPythonExample.
-:wq
+
 
 ## Description:
 Simple calculator application implemented in TDD concept. 

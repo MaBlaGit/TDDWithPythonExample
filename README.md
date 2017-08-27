@@ -47,10 +47,10 @@ $ python3 -m unittest discover
 ```
 In order to run __docstring__ tests:
 ```
-$ docstring_test
+$ make docstring_test
 ```
 To run __pylint__ code analysis
 ```
-$ pylint_tests
-$ pylint_app 
+$ make pylint_tests
+$ make pylint_app
 ```

@@ -11,6 +11,7 @@ class TestCalculatorApp(unittest.TestCase):
     def setUp(self):
         """Set up tests."""
         self.calculator = Calculator(2, 5)
+        self.calc_divide_by_zero = Calculator(5, 0)
 
     def test_add(self):
         """Test addition."""
@@ -28,9 +29,13 @@ class TestCalculatorApp(unittest.TestCase):
         """Test division."""
         self.assertEqual(self.calculator.divide(), 0.4, "Results should be 0.4")
 
+    def test_divide_by_zero(self):
+        """Test check if dividing by zero raise an exception."""
+        self.assertRaises(Exception, self.calc_divide_by_zero.divide)
+
     def test_data_type_raise_exception(self):
         """Test checks if wrong data type raise an exception."""
-        self.assertRaises(Exception, self.calculator.multiply(), "3", 2)
+        self.assertRaises(Exception, self.calculator.multiply, "3", 2)
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

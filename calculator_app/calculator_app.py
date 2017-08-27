@@ -23,6 +23,12 @@ class Calculator(object):
 
     - negative tests -
 
+    >>> divide_by_zero = Calculator(5, 0)
+    >>> divide_by_zero.divide()
+    Traceback (most recent call last):
+    ...
+    ValueError: You cannot divide by 0
+
     >>> wrong_type_one = Calculator(5, [1, 2])
     Traceback (most recent call last):
     ...
@@ -67,6 +73,8 @@ class Calculator(object):
 
     def divide(self):
         """Divide parameters."""
+        if self.num_y == 0 or self.num_x == 0:
+            raise ValueError("You cannot divide by 0")
         return self.num_x / self.num_y
 
 if __name__ == '__main__':

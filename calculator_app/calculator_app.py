@@ -77,5 +77,6 @@ class Calculator(object):
             raise ValueError("You cannot divide by 0")
         return self.num_x / self.num_y
 
+
 if __name__ == '__main__':
     doctest.testmod()

@@ -37,5 +37,6 @@ class TestCalculatorApp(unittest.TestCase):
         """Test checks if wrong data type raise an exception."""
         self.assertRaises(Exception, self.calculator.multiply, "3", 2)
 
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
